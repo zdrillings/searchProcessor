@@ -3,5 +3,9 @@ ebayAppId: ZacharyD-zdrillin-SBX-22466ad0e-e5df61a1
 ebayDevId: f74fae2e-980c-40cd-bacb-7bbfe26ec33c
 ebayCertId: SBX-2466ad0ea672-3fba-44e9-ade5-8c85
 ebayHost: https://api.sandbox.ebay.com/wsapi
+ebayFindingHost: http://svcs.sandbox.ebay.com/services/search/FindingService/v1
 ebayToken: AgAAAA**AQAAAA**aAAAAA**0sHRWA**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wFk4GlDJCKogydj6x9nY+seQ**BSMEAA**AAMAAA**tmaaFF5KT3RAnXHu4CyAqVNxJ9JppoQePb7uOAVogFlR/fyaxFxk6i6zvm3TX7+npUrSc0gjFPIkWSijGRN7+quFt81YaLiy557S5zVZ2usCwgs0KCMdEPh3F1TRLWdA8CHHx/ZJLG8fUixecDqyJAryj58cQAswsoJfUv92xxKlC2YdhgTyxMz3e6gNp8w8v4MmG3G+H+6hEy5+qmJsj3N9UsVaVcT/+oolhoxAjKB0sndvTN6SZBRASuSgUq3zRxTSrOB5N8kmsH0V4tBX3uR/F0xbjp13j9fdQCUjG2FzASTkxWTKscwnwP2KesYQk7xGKIiZTREH45XY6J+V6mOa1sKrM8Y06KnztXrtawihLBydc1uqUQM0D8Cw1Jyer+5JTqI217vo3MibXmpsIxMwgzzBbl9lQUO3RBwpkzuO/A/jRcJ+SJ0Q7e+q1TmXtAuPfLC3cX3KvU5Bw3Ws/7wb1vdWXRkvDKRVP/Yuwb4nI7fHZwlJMf/cYZQwbsgarxwersLdZ2kE8nLh2Ksx4X3EFOrWIVNAnTwQXMiRroIX8Y3uj1VmmKceFoyKJZM7xflzdox+v8R4NCGQxdhXEwKVNQitUaHmpAxtEJy1fzTN5DilG/5uuzsn1NQO8Lzdh/BfS3dbByg7L+VIi9WYFzbeTAfD9sMyp1Fo2T+xD8YdW5DIfob4W+iDGshLo993eHFmgKRetKamA8BTpJKByJ8P6vRnMH4GpOuXpyzyAMmwyurVDnubkWE0AQyfC+cB
 #ebayHost: https://api.ebay.com/wsapi
+
+#LiveAuctioneers Information
+liveAuctioneersHost: https://new.liveauctioneers.com/search

@@ -14,13 +14,15 @@ public class SearchResultItem {
 
     private String website = null;
 
-    private float price = 0;
+    private String title = null;
+
+    private double price = 0;
 
     public SearchResultItem() {
 
     }
 
-    public SearchResultItem(String link, String website, float price) {
+    public SearchResultItem(String link, String website, double price) {
         this(link, website);
         this.price = price;
     }
@@ -31,7 +33,8 @@ public class SearchResultItem {
     }
 
     public String toString(){
-        String ret = "Link: " + this.getLink();
+        String ret = "Title: " + this.getTitle();
+        ret = ret + " -- Link: " + this.getLink();
         ret = ret + " -- Site: " + this.getWebsite();
         ret = ret + " -- Price: " + this.getPrice();
         return ret;
@@ -48,8 +51,22 @@ public class SearchResultItem {
     }
 
     @JsonProperty
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 
+    @JsonProperty
+    public String getTitle() {
+        return title;
+    }
+
+    @JsonProperty
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    @JsonProperty
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }

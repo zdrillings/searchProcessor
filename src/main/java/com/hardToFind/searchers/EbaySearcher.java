@@ -1,37 +1,30 @@
 package com.hardToFind.searchers;
 
 import com.hardToFind.Models.SearchResultItem;
+import com.hardToFind.configuration.EbayConfiguration;
 import com.hardToFind.connectors.EbayConnector;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by zdrillings on 3/22/17.
  */
 public class EbaySearcher implements ISearcher {
-    private String ebayToken;
-    private String ebayHost;
+    private EbayConfiguration ebayConfiguration;
 
-    public EbaySearcher(String ebayToken, String ebayHost) {
-        this.ebayHost = ebayHost;
-        this.ebayToken = ebayToken;
+    public EbaySearcher(EbayConfiguration ebayConfiguration) {
+        this.ebayConfiguration = ebayConfiguration;
     }
 
     @Override
     public List<SearchResultItem> search(String query) {
 
-        EbayConnector ebayConnector = new EbayConnector(this.ebayToken, this.ebayHost);
-        String response = ebayConnector.callEbay();
+        EbayConnector ebayConnector = new EbayConnector(this.ebayConfiguration);
+        List<SearchResultItem> response = ebayConnector.callEbay(query).orElse(new ArrayList<>());
 
 
-        String link = response;
-        String website = response ;
-
-        SearchResultItem searchResultItem = new SearchResultItem(link, website);
-        List<SearchResultItem> value = Arrays.asList(new SearchResultItem[]{searchResultItem});
-
-        return value;
+        return response;
     }
 
 }

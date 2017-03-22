@@ -33,7 +33,7 @@ public class AppConfiguration {
                                                         (String) p.get("ebayDevId"),
                                                         (String) p.get("ebayAppId"));
 
-            liveAuctioneerConfiguration = new LiveAuctioneerConfiguration((String) p.get("liveAuctioneerHost"));
+            liveAuctioneerConfiguration = new LiveAuctioneerConfiguration((String) p.get("liveAuctioneersHost"));
 
     }
 

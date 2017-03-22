@@ -15,17 +15,18 @@ repositories {
     maven {
         url "https://raw.github.com/prestonvanloon/ebaysdkcore/mvn-repo/"
     }
-    // maven {
-    //      url  "http://dl.bintray.com/ivan/maven"
-    //  }
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile "org.mockito:mockito-core:2.7.1"
     compile group: 'ebaysdkcore', name: 'ebaysdkcore', version: '943'
-    //compile 'com.ebay:sdk:883'
     compile 'commons-cli:commons-cli:1.3.1'
+    //compile name: 'com.ebay.services.finding'
+    compile files('libs/finding.jar')
     compile 'org.slf4j:slf4j-api:1.7.22'
     compile 'org.slf4j:slf4j-log4j12:1.7.22'
     compile 'org.apache.httpcomponents:httpclient:4.5.2'
@@ -35,8 +36,7 @@ dependencies {
     compile 'org.jsoup:jsoup:1.10.2'
 }
 
-configPath = "$rootProject.projectDir/config/"
 
 run {
-    args configPath + 'app_config.yml'
+    args "$rootProject.projectDir/config/app_config.yml"
 }
